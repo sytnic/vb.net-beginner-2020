@@ -13,4 +13,14 @@
 
         MsgBox("hello " & stFirstName & " " & stLastName & " you are a " & stGender & " " & stOccupation)
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Эти значения будут автоматически добавлены
+        'в поле списка при загрузке формы
+        lstOccupation.Items.Add("Writer")
+        lstOccupation.Items.Add("Actor")
+        lstOccupation.Items.Add("Painter")
+
+    End Sub
 End Class
