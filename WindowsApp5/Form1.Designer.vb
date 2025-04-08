@@ -29,6 +29,8 @@ Partial Class Form1
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.txtGender = New System.Windows.Forms.TextBox()
         Me.lblGender = New System.Windows.Forms.Label()
+        Me.lstOccupation = New System.Windows.Forms.ListBox()
+        Me.lblOccupation = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnGo
@@ -88,11 +90,31 @@ Partial Class Form1
         Me.lblGender.TabIndex = 6
         Me.lblGender.Text = "Gender"
         '
+        'lstOccupation
+        '
+        Me.lstOccupation.FormattingEnabled = True
+        Me.lstOccupation.Items.AddRange(New Object() {"Doctor", "Programmer", "Teacher", "Student", "Tinker", "Tailor", "Soldier", "Sailor"})
+        Me.lstOccupation.Location = New System.Drawing.Point(596, 89)
+        Me.lstOccupation.Name = "lstOccupation"
+        Me.lstOccupation.Size = New System.Drawing.Size(103, 186)
+        Me.lstOccupation.TabIndex = 7
+        '
+        'lblOccupation
+        '
+        Me.lblOccupation.AutoSize = True
+        Me.lblOccupation.Location = New System.Drawing.Point(593, 41)
+        Me.lblOccupation.Name = "lblOccupation"
+        Me.lblOccupation.Size = New System.Drawing.Size(62, 13)
+        Me.lblOccupation.TabIndex = 8
+        Me.lblOccupation.Text = "Occupation"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblOccupation)
+        Me.Controls.Add(Me.lstOccupation)
         Me.Controls.Add(Me.lblGender)
         Me.Controls.Add(Me.txtGender)
         Me.Controls.Add(Me.lblLastName)
@@ -114,4 +136,6 @@ Partial Class Form1
     Friend WithEvents lblLastName As Label
     Friend WithEvents txtGender As TextBox
     Friend WithEvents lblGender As Label
+    Friend WithEvents lstOccupation As ListBox
+    Friend WithEvents lblOccupation As Label
 End Class
