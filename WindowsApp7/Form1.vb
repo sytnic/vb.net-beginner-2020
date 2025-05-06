@@ -1,25 +1,34 @@
 ﻿Public Class Form1
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
 
-        Dim iNumber1 As Integer
-        Dim iNumber2 As Integer
+        Dim dblNumber1 As Double
+        Dim dblNumber2 As Double
 
-        Dim iResult As Integer
+        Dim dblResult As Double
 
-        iNumber1 = txtNumber1.Text
-        iNumber2 = txtNumber2.Text
+        dblNumber1 = txtNumber1.Text
+        dblNumber2 = txtNumber2.Text
 
-        iResult = iNumber1 + iNumber2
-        MsgBox(iResult)
+        dblResult = dblNumber1 + dblNumber2
+        MsgBox(dblResult)
 
-        iResult = iNumber1 - iNumber2
-        MsgBox(iResult)
+        dblResult = dblNumber1 - dblNumber2
+        MsgBox(dblResult)
 
-        iResult = iNumber1 * iNumber2
-        MsgBox(iResult)
+        dblResult = dblNumber1 * dblNumber2
+        MsgBox(dblResult)
 
-        iResult = iNumber1 / iNumber2 'при Integer выдаст целое число 
-        MsgBox(iResult)
+        dblResult = dblNumber1 / dblNumber2
+        MsgBox(dblResult)
+
+        dblResult = dblNumber1 ^ dblNumber2  'возведение в степень
+        MsgBox(dblResult)
+
+        dblResult = dblNumber1 \ dblNumber2  'целочисленное деление
+        MsgBox(dblResult)
+
+        dblResult = dblNumber1 Mod dblNumber2  'остаток от деления
+        MsgBox(dblResult)
 
     End Sub
 End Class
