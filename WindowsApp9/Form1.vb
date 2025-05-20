@@ -4,18 +4,19 @@
         Dim stCountry As String
         stCountry = txtCountry.Text
 
-        ' Однострочный if
-        'If stCountry = "Australia" Then MsgBox("G'day mate")
+        ' If чувствительны к регистру.  
+        'Можно убрать чувствительность к регистру тем,
+        'что в переменную всегда будут попадать преобразованные буквы в верхнем регистре.  
+        stCountry = stCountry.ToUpper
 
-        ' Многострочный if
-        If stCountry = "Australia" Then
+        If stCountry = "AUSTRALIA" Then
             MsgBox("G'day mate")
             MsgBox("Good on ya")
             MsgBox("No worries")
-        ElseIf stCountry = "France" Then
+        ElseIf stCountry = "FRANCE" Then
             MsgBox("Bonjour")
             MsgBox("Comment allez-vous?")
-        ElseIf stCountry = "Japan" Then
+        ElseIf stCountry = "JAPAN" Then
             MsgBox("Konnichiwa")
             MsgBox("Choushi wa dou desu ka")
         Else
