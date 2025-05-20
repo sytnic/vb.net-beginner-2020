@@ -6,23 +6,34 @@
 
         ' If чувствительны к регистру.  
         'Можно убрать чувствительность к регистру тем,
-        'что в переменную всегда будут попадать преобразованные буквы в верхнем регистре.  
-        stCountry = stCountry.ToUpper
+        'что в переменную всегда будут попадать преобразованные буквы в верхнем регистре.
+        '
+        'stCountry = stCountry.ToUpper
 
-        If stCountry = "AUSTRALIA" Then
+        'Вариант - не перезаписывать введённую пользователем переменную,
+        'т.к. она может понадобиться далее в коде,
+        'а преобразовывать её только для If тестов. 
+
+        If stCountry.ToUpper = "AUSTRALIA" Then
+            ' частное преобразование
             MsgBox("G'day mate")
             MsgBox("Good on ya")
             MsgBox("No worries")
-        ElseIf stCountry = "FRANCE" Then
+        ElseIf stCountry.ToUpper = "FRANCE" Then
+            ' частное преобразование
             MsgBox("Bonjour")
             MsgBox("Comment allez-vous?")
-        ElseIf stCountry = "JAPAN" Then
+        ElseIf stCountry.ToUpper = "JAPAN" Then
+            ' частное преобразование
             MsgBox("Konnichiwa")
             MsgBox("Choushi wa dou desu ka")
         Else
             MsgBox("Hello there")
             MsgBox("I hope, you are well")
         End If
+
+        MsgBox("You entered " & stCountry)
+        ' изначально введённая пользователем переменная
 
     End Sub
 End Class
