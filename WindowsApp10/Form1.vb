@@ -2,7 +2,19 @@
     Private Sub btnGrade_Click(sender As Object, e As EventArgs) Handles btnGrade.Click
 
         Dim iScore As Integer
-        iScore = txtExamScore.Text
+
+        ' Если при приведении к числу, всё хорошо, то продолжаем присвоение.
+        ' IsNumeric не преобразует в число, а спрашивает, можно ли преобразовать в число.
+        If IsNumeric(txtExamScore.Text) = True Then
+            ' и дополнительно вводим приведение типа,
+            ' преобразовать в целое число,
+            ' т.к. по умолчанию из поля ввода даже цифры приходят как текст
+            iScore = CInt(txtExamScore.Text)
+        Else
+            ' Иначе остановим программу
+            MsgBox("You must enter a number")
+            Exit Sub
+        End If
 
         If iScore < 0 Or iScore > 100 Then
             MsgBox("That is not a valid score. Enter a number between 0 and 100")
