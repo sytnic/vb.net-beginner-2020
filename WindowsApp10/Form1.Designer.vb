@@ -30,6 +30,7 @@ Partial Class Form1
         'txtExamScore
         '
         Me.txtExamScore.Location = New System.Drawing.Point(324, 72)
+        Me.txtExamScore.MaxLength = 3
         Me.txtExamScore.Name = "txtExamScore"
         Me.txtExamScore.Size = New System.Drawing.Size(70, 20)
         Me.txtExamScore.TabIndex = 0
